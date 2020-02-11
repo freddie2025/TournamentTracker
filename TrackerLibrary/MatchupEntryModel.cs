@@ -1,6 +1,9 @@
 ﻿namespace TrackerLibrary
 {
-	public class MatchupEntryMode
+	/// <summary>
+	/// Represents one team in a matchup.
+	/// </summary>
+	public class MatchupEntryModel
 	{
 		/// <summary>
 		/// Represents one team in the matchup.
