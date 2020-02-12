@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="971b9f93-f525-4fc5-a9c0-6275db1869e2" ChangeDateTime="02/12/2020 13:28:01">
+    <Property Name="ElementName" Value="[dbo].[FK_TournamentEntries_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[TournamentEntries]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_TournamentEntries_ToTournaments]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="da96a820-b780-4e89-9570-8c43c8f60f6f" ChangeDateTime="02/12/2020 13:32:06">
+    <Property Name="ElementName" Value="[dbo].[FK_TournamentPrizes_ToTournament]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[TournamentPrizes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_TournamentPrizes_ToTournaments]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b889389b-f4c9-4b01-bd34-2470b12c8cdf" ChangeDateTime="02/12/2020 13:40:46">
+    <Property Name="ElementName" Value="[dbo].[FK_MatchupEntries_ToParentMatchups]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[MatchupEntries]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MatchupEntries_ToMatchups]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="abe0e5ee-0a93-4c51-995a-7cfd63aebe1b" ChangeDateTime="02/12/2020 13:40:54">
+    <Property Name="ElementName" Value="[dbo].[FK_MatchupEntries_ToMatchups]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[MatchupEntries]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_MatchupEntries_ToParentMatchups]" />
+  </Operation>
+</Operations>
