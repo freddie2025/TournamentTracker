@@ -1,4 +1,4 @@
-﻿namespace TrackerLibrary
+﻿namespace TrackerLibrary.Models
 {
 	/// <summary>
 	/// Represents what the prize is for the given place.

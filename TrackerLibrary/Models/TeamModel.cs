@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
 	public class TeamModel
 	{
