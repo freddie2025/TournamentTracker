@@ -41,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalConfig.cs" />
+    <Compile Include="IDataConnection.cs" />
     <Compile Include="MatchupEntryModel.cs" />
     <Compile Include="MatchupModel.cs" />
     <Compile Include="PersonModel.cs" />
     <Compile Include="PrizeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlConnector.cs" />
     <Compile Include="TeamModel.cs" />
+    <Compile Include="TextConnection.cs" />
     <Compile Include="TournamentModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
