@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using TrackerLibrary;
-using TrackerLibrary.DataAccess;
 using TrackerLibrary.Models;
 
 namespace TrackerUI
@@ -23,11 +22,8 @@ namespace TrackerUI
 					prizeAmountValue.Text,
 					prizePercentageValue.Text);
 
-				foreach (IDataConnection db in GlobalConfig.Connections)
-				{
-					db.CreatePrize(model);
-				}
-
+				GlobalConfig.Connection.CreatePrize(model);
+				
 				placeNameValue.Text = String.Empty;
 				placeNumberValue.Text = String.Empty;
 				prizeAmountValue.Text = "0";
