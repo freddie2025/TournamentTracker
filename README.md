@@ -1,6 +1,6 @@
 # Tournament Tracker
 
-C# Application from Start to Finish. See a Real-World Application Built From Scratch…and learn to do it yourself
+C# application from start to finish. See a real-world application built from scratch… and learn to do it yourself.
 
 ### Featured technologies used include:
 - Interfaces
