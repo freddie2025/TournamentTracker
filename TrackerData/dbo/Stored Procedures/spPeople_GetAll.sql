@@ -1,6 +1,12 @@
 ﻿CREATE PROCEDURE [dbo].[spPeople_GetAll]
-	@param1 int = 0,
-	@param2 int
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT	[People].[Id], 
+			[People].[FirstName], 
+			[People].[LastName], 
+			[People].[EmailAddress], 
+			[People].[CellphoneNumber]
+	FROM	[dbo].[People];
+END

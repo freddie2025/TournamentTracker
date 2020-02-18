@@ -45,7 +45,7 @@
 			this.firstNameValue = new System.Windows.Forms.TextBox();
 			this.firstNameLabel = new System.Windows.Forms.Label();
 			this.teamMembersListBox = new System.Windows.Forms.ListBox();
-			this.deletedSelectedMemberButton = new System.Windows.Forms.Button();
+			this.removeSelectedMemberButton = new System.Windows.Forms.Button();
 			this.createTeamButton = new System.Windows.Forms.Button();
 			this.addNewMemberGroupBox.SuspendLayout();
 			this.SuspendLayout();
@@ -53,7 +53,7 @@
 			// teamNameValue
 			// 
 			this.teamNameValue.Location = new System.Drawing.Point(28, 147);
-			this.teamNameValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.teamNameValue.Margin = new System.Windows.Forms.Padding(2);
 			this.teamNameValue.Name = "teamNameValue";
 			this.teamNameValue.Size = new System.Drawing.Size(464, 36);
 			this.teamNameValue.TabIndex = 13;
@@ -91,18 +91,19 @@
 			this.addMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.addMemberButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
 			this.addMemberButton.Location = new System.Drawing.Point(102, 308);
-			this.addMemberButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.addMemberButton.Margin = new System.Windows.Forms.Padding(2);
 			this.addMemberButton.Name = "addMemberButton";
 			this.addMemberButton.Size = new System.Drawing.Size(314, 53);
 			this.addMemberButton.TabIndex = 19;
 			this.addMemberButton.Text = "Add Member";
 			this.addMemberButton.UseVisualStyleBackColor = true;
+			this.addMemberButton.Click += new System.EventHandler(this.addMemberButton_Click);
 			// 
 			// selectTeamMemberDropDown
 			// 
 			this.selectTeamMemberDropDown.FormattingEnabled = true;
 			this.selectTeamMemberDropDown.Location = new System.Drawing.Point(30, 238);
-			this.selectTeamMemberDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.selectTeamMemberDropDown.Margin = new System.Windows.Forms.Padding(2);
 			this.selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
 			this.selectTeamMemberDropDown.Size = new System.Drawing.Size(462, 38);
 			this.selectTeamMemberDropDown.TabIndex = 18;
@@ -133,9 +134,9 @@
 			this.addNewMemberGroupBox.Font = new System.Drawing.Font("Segoe UI", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.addNewMemberGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
 			this.addNewMemberGroupBox.Location = new System.Drawing.Point(28, 396);
-			this.addNewMemberGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.addNewMemberGroupBox.Margin = new System.Windows.Forms.Padding(2);
 			this.addNewMemberGroupBox.Name = "addNewMemberGroupBox";
-			this.addNewMemberGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.addNewMemberGroupBox.Padding = new System.Windows.Forms.Padding(2);
 			this.addNewMemberGroupBox.Size = new System.Drawing.Size(499, 342);
 			this.addNewMemberGroupBox.TabIndex = 20;
 			this.addNewMemberGroupBox.TabStop = false;
@@ -150,7 +151,7 @@
 			this.createMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.createMemberButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
 			this.createMemberButton.Location = new System.Drawing.Point(162, 273);
-			this.createMemberButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.createMemberButton.Margin = new System.Windows.Forms.Padding(2);
 			this.createMemberButton.Name = "createMemberButton";
 			this.createMemberButton.Size = new System.Drawing.Size(301, 53);
 			this.createMemberButton.TabIndex = 21;
@@ -161,7 +162,7 @@
 			// cellphoneValue
 			// 
 			this.cellphoneValue.Location = new System.Drawing.Point(162, 216);
-			this.cellphoneValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cellphoneValue.Margin = new System.Windows.Forms.Padding(2);
 			this.cellphoneValue.Name = "cellphoneValue";
 			this.cellphoneValue.Size = new System.Drawing.Size(303, 43);
 			this.cellphoneValue.TabIndex = 16;
@@ -181,7 +182,7 @@
 			// emailValue
 			// 
 			this.emailValue.Location = new System.Drawing.Point(162, 162);
-			this.emailValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.emailValue.Margin = new System.Windows.Forms.Padding(2);
 			this.emailValue.Name = "emailValue";
 			this.emailValue.Size = new System.Drawing.Size(303, 43);
 			this.emailValue.TabIndex = 14;
@@ -201,7 +202,7 @@
 			// lastNameValue
 			// 
 			this.lastNameValue.Location = new System.Drawing.Point(162, 109);
-			this.lastNameValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.lastNameValue.Margin = new System.Windows.Forms.Padding(2);
 			this.lastNameValue.Name = "lastNameValue";
 			this.lastNameValue.Size = new System.Drawing.Size(303, 43);
 			this.lastNameValue.TabIndex = 12;
@@ -221,7 +222,7 @@
 			// firstNameValue
 			// 
 			this.firstNameValue.Location = new System.Drawing.Point(162, 57);
-			this.firstNameValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.firstNameValue.Margin = new System.Windows.Forms.Padding(2);
 			this.firstNameValue.Name = "firstNameValue";
 			this.firstNameValue.Size = new System.Drawing.Size(303, 43);
 			this.firstNameValue.TabIndex = 10;
@@ -244,26 +245,27 @@
 			this.teamMembersListBox.FormattingEnabled = true;
 			this.teamMembersListBox.ItemHeight = 30;
 			this.teamMembersListBox.Location = new System.Drawing.Point(575, 147);
-			this.teamMembersListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.teamMembersListBox.Margin = new System.Windows.Forms.Padding(2);
 			this.teamMembersListBox.Name = "teamMembersListBox";
-			this.teamMembersListBox.Size = new System.Drawing.Size(335, 572);
+			this.teamMembersListBox.Size = new System.Drawing.Size(335, 542);
 			this.teamMembersListBox.TabIndex = 21;
 			// 
-			// deletedSelectedMemberButton
+			// removeSelectedMemberButton
 			// 
-			this.deletedSelectedMemberButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-			this.deletedSelectedMemberButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(202)))));
-			this.deletedSelectedMemberButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-			this.deletedSelectedMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.deletedSelectedMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.deletedSelectedMemberButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-			this.deletedSelectedMemberButton.Location = new System.Drawing.Point(936, 410);
-			this.deletedSelectedMemberButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.deletedSelectedMemberButton.Name = "deletedSelectedMemberButton";
-			this.deletedSelectedMemberButton.Size = new System.Drawing.Size(128, 88);
-			this.deletedSelectedMemberButton.TabIndex = 24;
-			this.deletedSelectedMemberButton.Text = "Delete Selected";
-			this.deletedSelectedMemberButton.UseVisualStyleBackColor = true;
+			this.removeSelectedMemberButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+			this.removeSelectedMemberButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(202)))));
+			this.removeSelectedMemberButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+			this.removeSelectedMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.removeSelectedMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.removeSelectedMemberButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+			this.removeSelectedMemberButton.Location = new System.Drawing.Point(936, 410);
+			this.removeSelectedMemberButton.Margin = new System.Windows.Forms.Padding(2);
+			this.removeSelectedMemberButton.Name = "removeSelectedMemberButton";
+			this.removeSelectedMemberButton.Size = new System.Drawing.Size(128, 88);
+			this.removeSelectedMemberButton.TabIndex = 24;
+			this.removeSelectedMemberButton.Text = "Remove Selected";
+			this.removeSelectedMemberButton.UseVisualStyleBackColor = true;
+			this.removeSelectedMemberButton.Click += new System.EventHandler(this.removeSelectedMemberButton_Click);
 			// 
 			// createTeamButton
 			// 
@@ -274,7 +276,7 @@
 			this.createTeamButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.createTeamButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
 			this.createTeamButton.Location = new System.Drawing.Point(358, 787);
-			this.createTeamButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.createTeamButton.Margin = new System.Windows.Forms.Padding(2);
 			this.createTeamButton.Name = "createTeamButton";
 			this.createTeamButton.Size = new System.Drawing.Size(314, 53);
 			this.createTeamButton.TabIndex = 25;
@@ -286,9 +288,9 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(1094, 870);
+			this.ClientSize = new System.Drawing.Size(1100, 877);
 			this.Controls.Add(this.createTeamButton);
-			this.Controls.Add(this.deletedSelectedMemberButton);
+			this.Controls.Add(this.removeSelectedMemberButton);
 			this.Controls.Add(this.teamMembersListBox);
 			this.Controls.Add(this.addNewMemberGroupBox);
 			this.Controls.Add(this.addMemberButton);
@@ -327,7 +329,7 @@
 		private System.Windows.Forms.Label emailLabel;
 		private System.Windows.Forms.Button createMemberButton;
 		private System.Windows.Forms.ListBox teamMembersListBox;
-		private System.Windows.Forms.Button deletedSelectedMemberButton;
+		private System.Windows.Forms.Button removeSelectedMemberButton;
 		private System.Windows.Forms.Button createTeamButton;
 	}
 }
