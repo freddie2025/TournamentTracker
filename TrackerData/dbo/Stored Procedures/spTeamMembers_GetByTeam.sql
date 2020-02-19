@@ -1,6 +1,17 @@
 ﻿CREATE PROCEDURE [dbo].[spTeamMembers_GetByTeam]
-	@param1 int = 0,
-	@param2 int
+	@TeamId int
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT		[People].[Id], 
+				[People].[FirstName], 
+				[People].[LastName], 
+				[People].[EmailAddress], 
+				[People].[CellphoneNumber]
+	FROM		[dbo].[TeamMembers]
+	INNER JOIN	[dbo].[People]
+	ON			[People].[Id] = [TeamMembers].[PersonId]
+	WHERE		[TeamMembers].[TeamId] = @TeamId;
+
+END
