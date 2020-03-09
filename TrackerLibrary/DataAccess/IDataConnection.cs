@@ -9,6 +9,7 @@ namespace TrackerLibrary.DataAccess
 		PersonModel CreatePerson(PersonModel model);
 		List<PersonModel> GetPerson_All();
 		TeamModel CreateTeam(TeamModel model);
+		void CreateTournament(TournamentModel model);
 		List<TeamModel> GetTeam_All();
 	}
 }
