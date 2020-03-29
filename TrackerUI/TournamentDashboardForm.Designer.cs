@@ -94,6 +94,7 @@
 			this.createTournamentButton.TabIndex = 26;
 			this.createTournamentButton.Text = "Create Tournament";
 			this.createTournamentButton.UseVisualStyleBackColor = true;
+			this.createTournamentButton.Click += new System.EventHandler(this.createTournamentButton_Click);
 			// 
 			// TournamentDashboardForm
 			// 

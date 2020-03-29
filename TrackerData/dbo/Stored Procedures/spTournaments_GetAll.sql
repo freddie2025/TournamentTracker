@@ -1,6 +1,14 @@
 ﻿CREATE PROCEDURE [dbo].[spTournaments_GetAll]
-	@param1 int = 0,
-	@param2 int
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+
+	SET NOCOUNT ON;
+	
+	SELECT	Tournaments.Id, 
+			Tournaments.TournamentName, 
+			Tournaments.EntryFee, 
+			Tournaments.Active
+	FROM	[dbo].[Tournaments]
+	WHERE	Active = 1;
+
+END

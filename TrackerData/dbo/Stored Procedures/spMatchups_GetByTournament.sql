@@ -1,6 +1,16 @@
 ﻿CREATE PROCEDURE [dbo].[spMatchups_GetByTournament]
-	@param1 int = 0,
-	@param2 int
+	@TournamentId int
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN 
+
+	SET NOCOUNT ON;
+
+	SELECT		[Matchups].[Id], 
+				[Matchups].[TournamentId], 
+				[Matchups].[WinnerId], 
+				[Matchups].[MatchupRound]
+	FROM		[dbo].[Matchups]
+	WHERE		Matchups.TournamentId = @TournamentId
+	ORDER BY	Matchups.MatchupRound;
+
+END

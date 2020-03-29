@@ -1,6 +1,15 @@
 ﻿CREATE PROCEDURE [dbo].[spMatchupEntries_GetByMatchup]
-	@param1 int = 0,
-	@param2 int
+	@MatchupId int
 AS
-	SELECT @param1, @param2
-RETURN 0
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT	[MatchupEntries].[Id], 
+			[MatchupEntries].[MatchupId], 
+			[MatchupEntries].[ParentMatchupId], 
+			[MatchupEntries].[TeamCompetingId], 
+			[MatchupEntries].[Score]
+	FROM	[dbo].[MatchupEntries]
+	WHERE	[MatchupEntries].[MatchupId] = @MatchupId;
+
+END
