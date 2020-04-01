@@ -127,15 +127,14 @@ namespace TrackerUI
 			// Wire our matchups
 			TournamentLogic.CreateRounds(tm);
 
-			// Order our list randomly of teams
-			// Check if it is big enough - if not, add in byes - 2*2*2*2 - 2^4
-			// Create our first round of matchups
-			// Create every round after that - 8 matchups - 4 matchups - 2 matchups - 1 matchup
-
 			// Create Tournament entry
 			// Create all of the Prize entries
 			// Create all of the Team entries
 			GlobalConfig.Connection.CreateTournament(tm);
+
+			TournamentViewerForm frm = new TournamentViewerForm(tm);
+			frm.Show();
+			this.Close();
 		}
 	}
 }
