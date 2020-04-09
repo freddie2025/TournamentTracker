@@ -94,6 +94,7 @@
     <Build Include="dbo\Stored Procedures\spMatchupEntries_Insert.sql" />
     <Build Include="dbo\Stored Procedures\spMatchups_Update.sql" />
     <Build Include="dbo\Stored Procedures\spMatchupEntries_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spTournaments_Complete.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="TrackerData.refactorlog" />
